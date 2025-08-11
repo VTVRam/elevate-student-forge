@@ -8,151 +8,133 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/layout/Navigation";
 
 // Mock data for leaderboard
-const leaderboardData = [
-  {
-    rank: 1,
-    name: "Arjun Patel",
-    avatar: "",
-    college: "IIT Delhi",
-    points: 2845,
-    badges: 15,
-    eventsAttended: 28,
-    connectionsHelped: 42,
-    specialty: "AI/ML Expert",
-    trend: "up",
-    weeklyGain: 145
-  },
-  {
-    rank: 2,
-    name: "Priya Sharma",
-    avatar: "",
-    college: "BITS Pilani",
-    points: 2720,
-    badges: 13,
-    eventsAttended: 25,
-    connectionsHelped: 38,
-    specialty: "Full Stack Dev",
-    trend: "up",
-    weeklyGain: 98
-  },
-  {
-    rank: 3,
-    name: "Sneha Reddy",
-    avatar: "",
-    college: "NIT Warangal",
-    points: 2650,
-    badges: 12,
-    eventsAttended: 22,
-    connectionsHelped: 35,
-    specialty: "Data Science",
-    trend: "down",
-    weeklyGain: -23
-  },
-  {
-    rank: 4,
-    name: "Vikash Kumar",
-    avatar: "",
-    college: "VIT Vellore",
-    points: 2580,
-    badges: 11,
-    eventsAttended: 24,
-    connectionsHelped: 31,
-    specialty: "Mobile Dev",
-    trend: "up",
-    weeklyGain: 67
-  },
-  {
-    rank: 5,
-    name: "Ananya Singh",
-    avatar: "",
-    college: "IIIT Bangalore",
-    points: 2490,
-    badges: 10,
-    eventsAttended: 21,
-    connectionsHelped: 29,
-    specialty: "UI/UX Design",
-    trend: "up",
-    weeklyGain: 54
-  },
-  {
-    rank: 6,
-    name: "Rohit Gupta",
-    avatar: "",
-    college: "DTU Delhi",
-    points: 2380,
-    badges: 9,
-    eventsAttended: 19,
-    connectionsHelped: 26,
-    specialty: "Blockchain",
-    trend: "up",
-    weeklyGain: 89
-  },
-  {
-    rank: 7,
-    name: "Kavya Reddy",
-    avatar: "",
-    college: "IIIT Hyderabad",
-    points: 2310,
-    badges: 9,
-    eventsAttended: 18,
-    connectionsHelped: 24,
-    specialty: "Cybersecurity",
-    trend: "down",
-    weeklyGain: -12
-  },
-  {
-    rank: 8,
-    name: "Amit Sharma",
-    avatar: "",
-    college: "IIT Bombay",
-    points: 2250,
-    badges: 8,
-    eventsAttended: 17,
-    connectionsHelped: 22,
-    specialty: "DevOps",
-    trend: "up",
-    weeklyGain: 43
-  }
-];
-
-const achievements = [
-  {
-    title: "Event Participant",
-    description: "Attended 10+ events",
-    icon: Calendar,
-    color: "text-primary",
-    count: 156
-  },
-  {
-    title: "Network Builder",
-    description: "Connected 50+ students",
-    icon: Users,
-    color: "text-accent",
-    count: 89
-  },
-  {
-    title: "Top Performer",
-    description: "Top 10 this month",
-    icon: Trophy,
-    color: "text-premium",
-    count: 23
-  },
-  {
-    title: "Goal Achiever",
-    description: "Completed all goals",
-    icon: Target,
-    color: "text-success",
-    count: 67
-  }
-];
-
+const leaderboardData = [{
+  rank: 1,
+  name: "Arjun Patel",
+  avatar: "",
+  college: "IIT Delhi",
+  points: 2845,
+  badges: 15,
+  eventsAttended: 28,
+  connectionsHelped: 42,
+  specialty: "AI/ML Expert",
+  trend: "up",
+  weeklyGain: 145
+}, {
+  rank: 2,
+  name: "Priya Sharma",
+  avatar: "",
+  college: "BITS Pilani",
+  points: 2720,
+  badges: 13,
+  eventsAttended: 25,
+  connectionsHelped: 38,
+  specialty: "Full Stack Dev",
+  trend: "up",
+  weeklyGain: 98
+}, {
+  rank: 3,
+  name: "Sneha Reddy",
+  avatar: "",
+  college: "NIT Warangal",
+  points: 2650,
+  badges: 12,
+  eventsAttended: 22,
+  connectionsHelped: 35,
+  specialty: "Data Science",
+  trend: "down",
+  weeklyGain: -23
+}, {
+  rank: 4,
+  name: "Vikash Kumar",
+  avatar: "",
+  college: "VIT Vellore",
+  points: 2580,
+  badges: 11,
+  eventsAttended: 24,
+  connectionsHelped: 31,
+  specialty: "Mobile Dev",
+  trend: "up",
+  weeklyGain: 67
+}, {
+  rank: 5,
+  name: "Ananya Singh",
+  avatar: "",
+  college: "IIIT Bangalore",
+  points: 2490,
+  badges: 10,
+  eventsAttended: 21,
+  connectionsHelped: 29,
+  specialty: "UI/UX Design",
+  trend: "up",
+  weeklyGain: 54
+}, {
+  rank: 6,
+  name: "Rohit Gupta",
+  avatar: "",
+  college: "DTU Delhi",
+  points: 2380,
+  badges: 9,
+  eventsAttended: 19,
+  connectionsHelped: 26,
+  specialty: "Blockchain",
+  trend: "up",
+  weeklyGain: 89
+}, {
+  rank: 7,
+  name: "Kavya Reddy",
+  avatar: "",
+  college: "IIIT Hyderabad",
+  points: 2310,
+  badges: 9,
+  eventsAttended: 18,
+  connectionsHelped: 24,
+  specialty: "Cybersecurity",
+  trend: "down",
+  weeklyGain: -12
+}, {
+  rank: 8,
+  name: "Amit Sharma",
+  avatar: "",
+  college: "IIT Bombay",
+  points: 2250,
+  badges: 8,
+  eventsAttended: 17,
+  connectionsHelped: 22,
+  specialty: "DevOps",
+  trend: "up",
+  weeklyGain: 43
+}];
+const achievements = [{
+  title: "Event Participant",
+  description: "Attended 10+ events",
+  icon: Calendar,
+  color: "text-primary",
+  count: 156
+}, {
+  title: "Network Builder",
+  description: "Connected 50+ students",
+  icon: Users,
+  color: "text-accent",
+  count: 89
+}, {
+  title: "Top Performer",
+  description: "Top 10 this month",
+  icon: Trophy,
+  color: "text-premium",
+  count: 23
+}, {
+  title: "Goal Achiever",
+  description: "Completed all goals",
+  icon: Target,
+  color: "text-success",
+  count: 67
+}];
 export default function Leaderboard() {
   const [selectedPeriod, setSelectedPeriod] = useState("monthly");
-
   const getInitials = (name: string) => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
-
   const getRankIcon = (rank: number) => {
     switch (rank) {
       case 1:
@@ -165,7 +147,6 @@ export default function Leaderboard() {
         return <div className="h-6 w-6 flex items-center justify-center bg-muted rounded-full text-sm font-bold">{rank}</div>;
     }
   };
-
   const getRankBadge = (rank: number) => {
     if (rank <= 3) {
       const colors = ["bg-premium", "bg-muted-foreground", "bg-amber-600"];
@@ -173,9 +154,7 @@ export default function Leaderboard() {
     }
     return <Badge variant="outline">#{rank}</Badge>;
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Header */}
@@ -197,11 +176,7 @@ export default function Leaderboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Tabs value={selectedPeriod} onValueChange={setSelectedPeriod} className="mb-8">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-3">
-            <TabsTrigger value="weekly">Weekly</TabsTrigger>
-            <TabsTrigger value="monthly">Monthly</TabsTrigger>
-            <TabsTrigger value="allTime">All Time</TabsTrigger>
-          </TabsList>
+          
         </Tabs>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -215,13 +190,7 @@ export default function Leaderboard() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {leaderboardData.map((student, index) => (
-                  <div
-                    key={student.rank}
-                    className={`flex items-center space-x-4 p-4 rounded-lg transition-all duration-200 hover:bg-muted/50 ${
-                      student.rank <= 3 ? 'bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20' : 'bg-card'
-                    }`}
-                  >
+                {leaderboardData.map((student, index) => <div key={student.rank} className={`flex items-center space-x-4 p-4 rounded-lg transition-all duration-200 hover:bg-muted/50 ${student.rank <= 3 ? 'bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20' : 'bg-card'}`}>
                     {/* Rank */}
                     <div className="flex-shrink-0">
                       {getRankIcon(student.rank)}
@@ -257,12 +226,8 @@ export default function Leaderboard() {
                         <span className="text-sm text-muted-foreground">pts</span>
                       </div>
                       
-                      <div className={`flex items-center text-sm ${
-                        student.trend === 'up' ? 'text-success' : 'text-destructive'
-                      }`}>
-                        <TrendingUp className={`h-3 w-3 mr-1 ${
-                          student.trend === 'down' ? 'rotate-180' : ''
-                        }`} />
+                      <div className={`flex items-center text-sm ${student.trend === 'up' ? 'text-success' : 'text-destructive'}`}>
+                        <TrendingUp className={`h-3 w-3 mr-1 ${student.trend === 'down' ? 'rotate-180' : ''}`} />
                         {student.weeklyGain > 0 ? '+' : ''}{student.weeklyGain}
                       </div>
                     </div>
@@ -271,8 +236,7 @@ export default function Leaderboard() {
                     <Button variant="outline" size="sm" className="nav-item">
                       View Profile
                     </Button>
-                  </div>
-                ))}
+                  </div>)}
               </CardContent>
             </Card>
           </div>
@@ -314,9 +278,8 @@ export default function Leaderboard() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {achievements.map((achievement, index) => {
-                  const Icon = achievement.icon;
-                  return (
-                    <div key={index} className="flex items-center space-x-3">
+                const Icon = achievement.icon;
+                return <div key={index} className="flex items-center space-x-3">
                       <div className={`p-2 rounded-lg bg-primary/10`}>
                         <Icon className={`h-4 w-4 ${achievement.color}`} />
                       </div>
@@ -331,9 +294,8 @@ export default function Leaderboard() {
                       <Badge variant="secondary" className="text-xs">
                         {achievement.count}
                       </Badge>
-                    </div>
-                  );
-                })}
+                    </div>;
+              })}
               </CardContent>
             </Card>
 
@@ -358,6 +320,5 @@ export default function Leaderboard() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
