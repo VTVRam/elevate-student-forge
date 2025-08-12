@@ -29,7 +29,8 @@ const mockEvents = [
     rewards: ["Internship Opportunities", "Certificates"],
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
     verified: true,
-    trending: true
+    trending: true,
+    tags: ["AI", "Machine Learning", "Innovation", "Tech"]
   },
   {
     id: "2", 
@@ -49,7 +50,8 @@ const mockEvents = [
     difficulty: "Beginner-Friendly",
     rewards: ["Job Offers", "Certificates", "Swag/Merchandise"],
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Startup", "Pitch", "Entrepreneurship", "FinTech"]
   },
   {
     id: "3",
@@ -69,7 +71,8 @@ const mockEvents = [
     difficulty: "Intermediate",
     rewards: ["Certificates"],
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["React", "Next.js", "Web Dev", "Frontend"]
   },
   {
     id: "4",
@@ -89,7 +92,8 @@ const mockEvents = [
     difficulty: "Advanced",
     rewards: ["Certificates", "Portfolio Review"],
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["UX", "Design Thinking", "Research", "Portfolio"]
   },
   {
     id: "5",
@@ -109,7 +113,8 @@ const mockEvents = [
     difficulty: "Intermediate",
     rewards: ["Internship Opportunities", "Job Offers", "Swag/Merchandise"],
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Mobile", "App Development", "Android", "iOS"]
   },
   {
     id: "6",
@@ -130,7 +135,8 @@ const mockEvents = [
     difficulty: "Beginner-Friendly",
     rewards: ["Certificates", "Swag/Merchandise"],
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Cultural", "Music", "Dance", "Arts"]
   },
   {
     id: "7",
@@ -149,7 +155,8 @@ const mockEvents = [
     difficulty: "Intermediate",
     rewards: ["Certificates", "Internship Opportunities"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Data Science", "Analytics", "Python", "Machine Learning"]
   },
   {
     id: "8",
@@ -170,7 +177,8 @@ const mockEvents = [
     difficulty: "Advanced",
     rewards: ["Swag/Merchandise", "Certificates"],
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Gaming", "Esports", "Competition", "Strategy"]
   },
   {
     id: "9",
@@ -189,7 +197,8 @@ const mockEvents = [
     difficulty: "Beginner-Friendly",
     rewards: ["Certificates", "Internship Opportunities"],
     image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["FinTech", "Innovation", "Payments", "Technology"]
   },
   {
     id: "10",
@@ -210,7 +219,8 @@ const mockEvents = [
     difficulty: "Advanced",
     rewards: ["Certificates", "Portfolio Review"],
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=300&fit=crop",
-    verified: true
+    verified: true,
+    tags: ["Blockchain", "Cryptocurrency", "Web3", "Technology"]
   }
 ];
 

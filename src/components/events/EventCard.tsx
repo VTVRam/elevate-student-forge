@@ -12,7 +12,7 @@ interface EventCardProps {
     date: string;
     time: string;
     location: string;
-    registrationStatus: "open" | "closed" | "full";
+    registrationStatus: "open" | "closed" | "full" | "ending_soon";
     isPaid: boolean;
     fee?: number;
     prizePool?: string;
@@ -29,6 +29,8 @@ export default function EventCard({ event }: EventCardProps) {
     switch (event.registrationStatus) {
       case "open":
         return <Badge className="bg-success text-success-foreground">Registration Open</Badge>;
+      case "ending_soon":
+        return <Badge className="bg-accent text-accent-foreground">Ending Soon</Badge>;
       case "closed":
         return <Badge variant="destructive">Registration Closed</Badge>;
       case "full":
@@ -42,6 +44,8 @@ export default function EventCard({ event }: EventCardProps) {
     switch (event.registrationStatus) {
       case "open":
         return "border-l-success";
+      case "ending_soon":
+        return "border-l-accent";
       case "closed":
         return "border-l-destructive";
       case "full":
