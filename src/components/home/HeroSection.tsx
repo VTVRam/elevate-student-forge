@@ -1,37 +1,29 @@
 import { ArrowRight, Users, Calendar, Award, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const stats = [
-  {
-    icon: Users,
-    value: "50K+",
-    label: "Active Students",
-    color: "text-primary"
-  },
-  {
-    icon: Calendar,
-    value: "1000+",
-    label: "Events Monthly",
-    color: "text-accent"
-  },
-  {
-    icon: Award,
-    value: "200+",
-    label: "Mentors",
-    color: "text-verified"
-  },
-  {
-    icon: TrendingUp,
-    value: "95%",
-    label: "Success Rate",
-    color: "text-premium"
-  }
-];
-
+const stats = [{
+  icon: Users,
+  value: "50K+",
+  label: "Active Students",
+  color: "text-primary"
+}, {
+  icon: Calendar,
+  value: "1000+",
+  label: "Events Monthly",
+  color: "text-accent"
+}, {
+  icon: Award,
+  value: "200+",
+  label: "Mentors",
+  color: "text-verified"
+}, {
+  icon: TrendingUp,
+  value: "95%",
+  label: "Success Rate",
+  color: "text-premium"
+}];
 export default function HeroSection() {
-  return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+  return <section className="relative overflow-hidden py-20 lg:py-28">
       {/* Background Elements */}
       <div className="absolute inset-0 gradient-hero opacity-5"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -60,22 +52,13 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in">
-            <Button size="lg" className="btn-primary text-lg px-8 py-4">
-              Start Networking
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 nav-item">
-              Discover Events
-            </Button>
-          </div>
+          
 
           {/* Stats Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
             {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card key={index} className="card-elevated p-6 text-center">
+            const Icon = stat.icon;
+            return <Card key={index} className="card-elevated p-6 text-center">
                   <CardContent className="p-0">
                     <Icon className={`h-8 w-8 mx-auto mb-3 ${stat.color}`} />
                     <div className="text-2xl font-bold text-foreground mb-1">
@@ -85,12 +68,10 @@ export default function HeroSection() {
                       {stat.label}
                     </div>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
