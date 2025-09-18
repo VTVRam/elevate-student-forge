@@ -98,12 +98,47 @@ const userData = {
     }
   ],
   
-  recentActivity: [
-    { type: "event", title: "Attended AI/ML Workshop", date: "2 days ago" },
-    { type: "connection", title: "Connected with Priya from BITS", date: "3 days ago" },
-    { type: "badge", title: "Earned 'Mentor' badge", date: "1 week ago" },
-    { type: "project", title: "Updated Study Assistant project", date: "1 week ago" },
-    { type: "event", title: "Won Hackathon at IIT Mumbai", date: "2 weeks ago" }
+  activities: [
+    {
+      title: "Co-Champion at VSSC",
+      organization: "Vishnu Student Success Center",
+      role: "Co-Champion",
+      duration: "2023 - 2024",
+      period: "1 Year",
+      description: "Led student success initiatives and mentored fellow students in academic and personal development.",
+      type: "leadership",
+      status: "Completed"
+    },
+    {
+      title: "Marketing Lead at GDG",
+      organization: "Google Developer Groups",
+      role: "Marketing Lead",
+      duration: "2024 - 2025",
+      period: "1 Year",
+      description: "Driving marketing strategies and community engagement for Google Developer Groups events and workshops.",
+      type: "marketing",
+      status: "Ongoing"
+    },
+    {
+      title: "Outreach Lead at ECELL",
+      organization: "Entrepreneurship Cell",
+      role: "Outreach Lead",
+      duration: "2024 - 2026",
+      period: "2 Years",
+      description: "Leading outreach initiatives to connect entrepreneurs and foster startup ecosystem within the campus.",
+      type: "outreach",
+      status: "Ongoing"
+    },
+    {
+      title: "PIVOT Volunteer",
+      organization: "PIVOT Event",
+      role: "Volunteer",
+      duration: "16th June 2023 - 18th June 2023",
+      period: "3 Days",
+      description: "Contributed as a dedicated volunteer during the intensive 3-day PIVOT event, supporting event coordination and participant engagement.",
+      type: "volunteer",
+      status: "Completed"
+    }
   ]
 };
 
@@ -398,38 +433,45 @@ export default function Profile() {
 
           {/* Activity Tab */}
           <TabsContent value="activity" className="mt-8">
-            <Card className="card-elevated">
-              <CardHeader>
-                <CardTitle>Recent Activity</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {userData.recentActivity.map((activity, index) => {
-                  const getActivityIcon = (type: string) => {
-                    switch (type) {
-                      case "event": return Calendar;
-                      case "connection": return Users;
-                      case "badge": return Award;
-                      case "project": return BookOpen;
-                      default: return Star;
-                    }
-                  };
-                  
-                  const Icon = getActivityIcon(activity.type);
-                  
-                  return (
-                    <div key={index} className="flex items-center space-x-4 p-4 bg-muted/30 rounded-lg">
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <Icon className="h-4 w-4 text-primary" />
+            <div className="space-y-6">
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold text-foreground">Leadership & Activities</h2>
+                <p className="text-muted-foreground">{userData.activities.length} experiences</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {userData.activities.map((activity, index) => (
+                  <Card key={index} className="card-elevated">
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        <span className="text-lg">{activity.title}</span>
+                        <Badge variant={activity.status === "Completed" ? "default" : "secondary"}>
+                          {activity.status}
+                        </Badge>
+                      </CardTitle>
+                      <div className="space-y-1">
+                        <p className="text-primary font-medium">{activity.organization}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {activity.duration} • {activity.period}
+                        </p>
                       </div>
-                      <div className="flex-1">
-                        <p className="font-medium text-foreground">{activity.title}</p>
-                        <p className="text-sm text-muted-foreground">{activity.date}</p>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-muted-foreground">{activity.description}</p>
+                      
+                      <div className="flex items-center justify-between">
+                        <Badge variant="outline" className="text-xs capitalize">
+                          {activity.type}
+                        </Badge>
+                        <span className="text-xs text-muted-foreground font-medium">
+                          {activity.role}
+                        </span>
                       </div>
-                    </div>
-                  );
-                })}
-              </CardContent>
-            </Card>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </TabsContent>
         </Tabs>
       </div>
